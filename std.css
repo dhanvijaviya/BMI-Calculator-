@@ -1,0 +1,181 @@
+.left-part {
+    background-image: url('img/v960-ning-31.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.intro-text {
+    text-align: justify; 
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.intro-text h1 {
+    font-size: 33px; 
+    margin-bottom: 10px; 
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold; 
+    color: #17153b;
+}
+
+.intro-text p {
+    font-size: 15px; 
+    line-height: 1.5; 
+    font-family: "Montserrat", sans-serif;
+    color: #17153b;
+    margin-bottom: 20px; 
+}
+
+.bmi-result {
+    font-family: 'Courier', monospace;
+    font-size: 20px; 
+    color: #ffffff; 
+    margin-top: 20px; 
+    padding: 10px 15px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 8px; 
+    width: 300px; 
+    text-align: center; 
+    display: none; 
+    animation: light-effect 2s infinite; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 209, 255, 0.5); 
+}
+
+@keyframes light-effect {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 209, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 209, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 209, 255, 0.5);
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .intro-text {
+        max-width: 90%; 
+        padding: 0 10px; /* Adjust padding for mobile */
+    }
+
+    .bmi-result {
+        width: 90%; /* Make result width responsive */
+        font-size: 18px; /* Adjust font size for better readability */
+    }
+
+    .rectangle {
+        padding: 20px; /* Reduce padding for mobile view */
+        max-width: 90%; /* Full width on small screens */
+    }
+}
+
+.right-part {
+    background-color: #fff; 
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.rectangle {
+    background-color: #17153b; 
+    color: #fff; 
+    font-family: "Montserrat", sans-serif;
+    padding: 30px; 
+    border-radius: 5px; 
+    width: 100%; 
+    max-width: 400px; 
+    text-align: center; 
+    position: relative; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0.5, 0.2); 
+}
+
+.bmi-form h2 {
+    margin-bottom: 20px;
+}
+
+.bmi-form label {
+    font-size: 16px;
+    color: #fff;
+}
+
+.bmi-form input {
+    width: 100%; 
+    padding: 5px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; 
+    font-size: 14px;
+}
+
+.bmi-form .radio-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bmi-form .radio-group label {
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.bmi-form .radio-group input {
+    margin-right: 5px;
+}
+
+.bmi-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px 30px 30px 10px; 
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bmi-form button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.right-rectangle {
+    position: absolute;
+    right: 30%; 
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+table.table {
+    margin: 0 auto;
+}
+
+/* Image styling for the BMI chart */
+#bmiImage {
+    display: none; 
+    width: 80%; 
+    max-width: 500px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 209, 255, 0.5); 
+    margin-top: 20px; 
+    transition: all 0.3s ease; 
+}
+
+#bmiImage:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 209, 255, 0.7); 
+}

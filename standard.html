@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="std.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 left-part">
+                <div class="intro-text">
+                    <h1>Body Mass Index Calculator</h1><br>
+                    <p id="introParagraph">Better understand your weight in relation to your height using our body mass index (BMI) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.</p>
+                </div>
+                <div id="result" class="bmi-result" style="display:none;"></div> <!-- Initially hidden -->
+
+                <!-- Add the BMI chart image -->
+                <img id="bmiImage" src="img/table.png" alt="BMI Chart" style="display:none; width:100%; height:auto;"> <!-- Adjust the path and size as needed -->
+            </div>
+
+            <div class="col-md-4 right-part">
+                <!-- Rectangle with BMI calculator -->
+                <div class="rectangle right-rectangle">
+                    <div class="bmi-form">
+                        <h2>BMI Calculator</h2>
+                        <div class="radio-group">
+                            <label>
+                                <a href="#" id="matrixLink">Matrix</a>
+                            </label>
+                            <label>
+                                <a href="#" id="chartLink">Chart</a>
+                            </label>
+                        </div>
+
+                        <!-- Table for input fields -->
+                        <table class="table table-borderless text-white" id="bmiTable">
+                            <tbody>
+                                <tr>
+                                    <td><label for="heightInput">Height</label></td>
+                                    <td><input type="text" id="heightInput" name="height" placeholder="cm"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="weightInput">Weight</label></td>
+                                    <td><input type="text" id="weightInput" name="weight" placeholder="kg"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <button id="btn" class="btn-neon">Calculate</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> <!-- Link to your JS file -->
+</body>
+
+</html>
